@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content">
+  
+  
+<TextView
+android:id="@+id/widget1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Penn College App"
+android:textSize="38sp"
+android:textStyle="bold"
+android:textColor="#0000FF"
+android:gravity="center"
+android:layout_x="1px"
+android:layout_y="74px"
+>
+</TextView>
+
+
+</LinearLayout>
