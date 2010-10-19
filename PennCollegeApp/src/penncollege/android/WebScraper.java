@@ -17,9 +17,9 @@ public class WebScraper {
 	 * @param uri - URL to download info from
 	 * @param startStr - String that isn't included in return to start from
 	 * @param endStr - String that isn't included in return to end at
-	 * @return - Strign between startStr and endStr, or null if a problem happened
+	 * @return - String between startStr and endStr, or null if a problem happened
 	 */
-	private static String getInside(String uri,String startStr, String endStr){
+	protected  static String getInside(String uri,String startStr, String endStr){
 		String src = "";
 		src = getHTTPSource(uri);
 		if(src.equals("")) {
@@ -33,20 +33,20 @@ public class WebScraper {
 		
 	}
 	/**
-	 * 
-	 * @param src
+	 * Gets text between the 
+	 * @param src 
 	 * @param startStr
 	 * @param endStr
 	 * @return
 	 */
-	private static String getInsideStr(String src,String startStr, String endStr){
+	protected static String getInsideStr(String src,String startStr, String endStr){
 			int start = src.indexOf(startStr)+startStr.length();
 			int end = src.indexOf(endStr);
 			return src.substring(start,end);
 		}
 	
 	//Taken from http://www.agilemedicine.com/medBlog/?p=21
-	private static String getHTTPSource(String url) {
+	protected  static String getHTTPSource(String url) {
 		String src = "";
 		DefaultHttpClient client = new DefaultHttpClient();
 		try {
@@ -62,7 +62,7 @@ public class WebScraper {
 	}
 	
 	//Taken from http://www.agilemedicine.com/medBlog/?p=21
-	private static String generateString(InputStream stream) {
+	protected  static String generateString(InputStream stream) {
 		   InputStreamReader reader = new InputStreamReader(stream);
 		  BufferedReader buffer = new BufferedReader(reader);
 		StringBuilder sb = new StringBuilder();
